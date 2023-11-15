@@ -19,17 +19,7 @@
          "plan": "heroku-postgresql"
       }
    ],
-    "buildpacks": [
-          {
-              "url": "https://github.com/heroku/heroku-buildpack-python"
-          },
-          {
-              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-          }
-      ],
-      "stack": "basic"
-    }
-  }
+      
    "env": {
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
@@ -231,4 +221,16 @@
       }
       
    }
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "stack": "container"      
 }
